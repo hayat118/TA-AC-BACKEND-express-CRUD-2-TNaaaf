@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="/">
+      <h2>Articles details page</h2>
+    </a>
+    <nav>
+      <a href="/users/list">
+        <button>List of articles</button>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <h2> <%= article.title %> </h2>
+      <h2> <%= article.description %> </h2>
+      <h2> <%= article.tags%> </h2>
+      <h2> <%= article.author%> </h2>
+    </div>
+     <div>
+       <h3><%= article.likes ? article.likes:0 %></h3>
+      <a href="/users/<%= article._id %>/likes ">
+        <button>like</button>
+      </a>
+    </div>
+    <div>
+      <a href="/users/<%= article._id %>/edit">
+        <button>Edit</button>
+      </a>
+    </div>
+    <div>
+      <a href="/users/<%= article._id %>/delete ">
+        <button>Delete</button>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
