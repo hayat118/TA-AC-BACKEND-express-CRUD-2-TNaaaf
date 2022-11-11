@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="">
+      <h1>Book Details Page</h1>
+    </a>
+    <a href="/books">
+      <h2>List of Books</h2>
+    </a>
+  </header>
+  <main>
+    <div>
+      <h2> <%= book.title%></h2>
+      <h2> <%= book.summary%></h2>
+      <h2> <%= book.pages%></h2>
+      <h2> <%= book.publication%></h2>
+      <h2> <%= book.category%></h2>
+    </div>
+    <div>
+      <h2> author:</h2>
+        <p><%= book.author.name %></p>
+        <p><%= book.author.email %></p>
+        <p><%= book.author.country %></p>
+    </div>
+    <div>
+       <a href="/books/<%= book._id %>/delete">
+         <button>Delete</button>
+       </a>
+    </div>
+   
+  </main>
+</body>
+</html>
