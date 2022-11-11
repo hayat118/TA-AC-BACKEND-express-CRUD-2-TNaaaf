@@ -6,10 +6,10 @@ var bookSchema= new Schema({
   summary:{type:String},
   pages:{type:Number},
   publication:{type:String},
-  // cover_image:{type:URL},
-  // category:[{type:Schema.Types.ObjectId, ref:"category"}],
-  category:[{type:String}],
-  author:{type:Schema.Types.ObjectId, ref:"Author"},
+  // cover_image:{type:String},
+  authorId:[{type:Schema.Types.ObjectId, ref:"Author"}],
+  categoryId:[{type:Schema.Types.ObjectId, ref:"category"}],
+
 
 },{timestamps:true});
 
